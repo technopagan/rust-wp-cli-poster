@@ -1,6 +1,6 @@
 # rust-wp-cli-poster
 
-Finger practice: make a Rust CLI tool that can post short status messages to my WordPress for microblogging.
+Finger practice: make a Rust CLI tool in an afternoon that can post short status messages to my WordPress.
 
 ## Set it up
 
