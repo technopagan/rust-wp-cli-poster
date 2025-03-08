@@ -1,0 +1,11 @@
+# config_example.toml
+
+[wordpress]
+# The URL to the REST API endpoint for posts
+wordpress_url = "https://www.your-wordpress.tld/wp-json/wp/v2/posts"
+# Replace with your actual WordPress username
+username = "example_username"
+# Replace with your actual WordPress application password you generated
+application_password = "example_application_password"
+# The ID (integer) of the category you want to post to
+category_id = 123
