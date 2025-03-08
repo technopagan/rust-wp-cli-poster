@@ -2,7 +2,6 @@ use clap::Parser;
 use reqwest::Client;
 use serde::Deserialize;
 use serde_json::json;
-use std::fs;
 const CONFIG: &str = include_str!("../config.toml");
 
 #[derive(Parser)]
