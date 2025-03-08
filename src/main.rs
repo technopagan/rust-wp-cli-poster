@@ -3,6 +3,7 @@ use reqwest::Client;
 use serde::Deserialize;
 use serde_json::json;
 use std::fs;
+const CONFIG: &str = include_str!("./config.toml");
 
 #[derive(Parser)]
 #[command(name = "rust-wp-cli-poster")]
@@ -26,9 +27,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let args = Args::parse();
     let content = args.content.join(" ");
 
-    // Read and parse the configuration file
-    let config_content = fs::read_to_string("./config.toml")?;
-    let config: Config = toml::from_str(&config_content)?;
+    // Parse the configuration file from compile-time configuration
+    let config: Config = toml::from_str(CONFIG)?;
 
     // Parse category_id
     let category_id= config.category_id;
