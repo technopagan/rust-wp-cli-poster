@@ -21,3 +21,16 @@ cargo update && cargo run 'the post message'
 cargo build --release
 strip target/release/rust-wp-cli-poster  
 ```
+
+## Make it accessible for use
+
+``` shell
+ln -s /path/to/rust-wp-cli-poster/target/release/blog /somewhere/in_your_path/blog
+chmod +x /somewhere/in_your_path/blog
+```
+
+## Use it
+
+``` shell
+blog 'Your glorious microblogging message'
+```
